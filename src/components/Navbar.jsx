@@ -3,7 +3,7 @@ export default function Navbar() {
     <nav className="fixed top-0 z-50 w-full border-b border-slate-800/70 bg-slate-950/70 backdrop-blur-xl">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4">
         <a href="#home" className="text-sm font-semibold tracking-[0.2em] text-slate-100">
-          LAKSHMI SAGAR
+          <h1>LAKSHMI SAGAR SESHADRI</h1>
         </a>
         <div className="flex flex-wrap justify-end gap-6 text-xs font-medium uppercase tracking-[0.14em] text-slate-400">
           <a href="#about" className="nav-link">About</a>
