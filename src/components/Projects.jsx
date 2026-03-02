@@ -1,3 +1,5 @@
+
+
 const projects = [
   {
     name: "Mood Journal",
@@ -20,37 +22,51 @@ const projects = [
       "Tech Stack: Python, Scikit-learn, Pandas",
     ],
   },
+  {
+  name: "Conix - Arousal Estimation System",
+  description: [
+    "A real-time, on-device system that estimates and visualizes physiological arousal (tension level) from facial and ocular micro-signals using a webcam, designed for biofeedback and research purposes without making intent or lie-detection claims.",
+    "Tech Stack: Python, MediaPipe, OpenCV, NumPy, SciPy, Streamlit, Plotly, SQLite"
+  ],
+  },
+  {
+    "name": "AccrediPilot - (UNDER DEVELOPMENT)",
+    "description": [
+      "An AI-powered Academic Compliance and Accreditation Automation Platform designed to streamline course-level documentation and NBA/NAAC readiness in higher education institutions. The system transforms structured academic inputs (student records, internal assessments, attendance, feedback, planning data) and unstructured institutional documents (workshops, FDPs, research papers, extension activities) into inspection-ready outputs aligned with accreditation criteria.",
+      "AccrediPilot implements a modular multi-agent architecture where specialized agents perform academic performance analytics, CO–PO attainment computation, feedback intelligence, semantic accreditation document classification, compliance risk scoring, and automated narrative generation. It replaces repetitive manual documentation processes ",
+      "Tech Stack: Python, FastAPI, PostgreSQL, React, Tailwind CSS, Pandas, NumPy, Sentence-Transformers, OpenAI API, PyMuPDF, python-docx, Recharts, Docker"
+    ]
+  }
 ];
 
-export default function Projects() {
-  return (
-    <section id="projects" className="py-24 bg-black">
-      <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-4xl font-bold mb-12 text-center text-white">
-          Projects
-        </h2>
 
-        <div className="grid md:grid-cols-2 gap-8">
+export default function Projects() {
+  return (    
+    <section id="projects" className="section-shell py-24 md:py-28">
+      
+      <div className="mx-auto w-full max-w-6xl px-6">
+        <div className="mb-12" data-reveal>
+          <p className="eyebrow reveal">Selected Work</p>
+          <h1 className="section-title reveal delay-1 mt-3">Projects</h1>
+          <p className="reveal delay-2 mt-4 max-w-2xl text-slate-400">
+            A selection of projects that demonstrate my expertise in building reliable intelligence systems across various domains, including applied AI, machine learning, and distributed backend engineering.
+          </p>
+        </div>
+        <div className="grid gap-6 md:grid-cols-2">
           {projects.map((project, i) => (
             <div
               key={project.name}
-              className="bg-white border border-gray-200 rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              style={{
-                animation: `fadeInUp 0.5s ease-out ${i * 0.15}s forwards`,
-                opacity: 0,
-              }}
+              data-reveal
+              className={`reveal project-card ${i % 2 ? "delay-1" : ""}`}
             >
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">
-                {project.name}
-              </h3>
-
-              <div className="space-y-3 text-gray-600">
+              <h3 className="text-xl font-semibold text-slate-100">{project.name}</h3>
+              <div className="mt-4 space-y-3 text-[0.97rem] leading-relaxed text-slate-300">
                 {project.description.map((line, idx) => (
                   <p
                     key={idx}
                     className={
                       line.startsWith("Tech Stack")
-                        ? "text-sm text-gray-500 italic"
+                        ? "mt-4 border-t border-slate-800 pt-4 text-sm font-medium text-slate-400"
                         : ""
                     }
                   >
@@ -62,20 +78,6 @@ export default function Projects() {
           ))}
         </div>
       </div>
-
-      {/* Animation */}
-      <style jsx>{`
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      `}</style>
     </section>
   );
 }

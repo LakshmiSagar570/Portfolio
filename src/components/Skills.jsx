@@ -1,5 +1,7 @@
 const skills = [
-  "C","JAVA","TypeScript",
+  "C",
+  "Java",
+  "TypeScript",
   "React",
   "Node.js",
   "Machine Learning",
@@ -15,20 +17,20 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24">
-      <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-4xl font-bold mb-12 text-center">Skills</h2>
-
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+    <section id="skills" className="section-shell py-24 md:py-28">
+      <div className="mx-auto w-full max-w-6xl px-6">
+        <div className="mb-12" data-reveal>
+          <p className="eyebrow reveal">Expertise</p>
+          <h2 className="section-title reveal delay-1 mt-3">Skills</h2>
+        </div>
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
           {skills.map((skill, i) => (
             <div
               key={skill}
-              className="skill-card bg-white border border-gray-200 rounded-lg p-6 text-center shadow-md hover:shadow-xl transition-shadow duration-300 hover:-translate-y-1"
-              style={{ animation: `fadeInUp 0.5s ${i * 0.1}s ease-out forwards`, opacity: 0 }}
+              data-reveal
+              className={`reveal skill-chip ${i % 3 === 1 ? "delay-1" : ""} ${i % 3 === 2 ? "delay-2" : ""}`}
             >
-              <h3 className="text-lg font-semibold text-gray-800">
-                {skill}
-              </h3>
+              {skill}
             </div>
           ))}
         </div>
