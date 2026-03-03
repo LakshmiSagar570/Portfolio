@@ -1,5 +1,5 @@
 const skills = [
-  "C",
+  "C","Python",
   "Java",
   "TypeScript",
   "React",
@@ -11,7 +11,6 @@ const skills = [
   "Tailwind CSS",
   "Data Structures",
   "Algorithms",
-  "Python",
   "JavaScript",
 ];
 
