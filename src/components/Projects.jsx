@@ -30,6 +30,11 @@ const projects = [
   ],
   },
   {
+  "name":"AssumptionX",
+  "description":["AssumptionX is a modern web application designed to help users identify and challenge the assumptions they hold. The platform provides an intuitive interface for examining and removing limiting beliefs, fostering clearer thinking and better decision-making. The project demonstrates full-stack development expertise with a focus on user experience and scalability.","Live Demo: assumption-x.vercel.app",
+    "Tech Stack: TypeScript • React • JavaScript • CSS"]
+  },
+  {
     "name": "AccrediPilot - (UNDER DEVELOPMENT)",
     "description": [
       "An AI-powered Academic Compliance and Accreditation Automation Platform designed to streamline course-level documentation and NBA/NAAC readiness in higher education institutions. The system transforms structured academic inputs (student records, internal assessments, attendance, feedback, planning data) and unstructured institutional documents (workshops, FDPs, research papers, extension activities) into inspection-ready outputs aligned with accreditation criteria.",
